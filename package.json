@@ -1,0 +1,22 @@
+{
+  "name": "quick-spot-redirect-page",
+  "version": "1.0.0",
+  "description": "A simple redirect page for Quick Spot customers after Stripe payment setup",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build step required'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "redirect",
+    "stripe",
+    "payment",
+    "quick-spot"
+  ],
+  "author": "Quick Spot",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "quick-spot-redirect-page",
+  "name": "quick-spot-website",
   "version": "1.0.0",
   "description": "A simple redirect page for Quick Spot customers after Stripe payment setup",
   "main": "index.html",

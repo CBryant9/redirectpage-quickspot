@@ -2,7 +2,7 @@
 
 A simple, elegant redirect page for Quick Spot customers after they complete their Stripe payment setup.
 
-**GitHub Repository:** [https://github.com/CBryant9/redirectpage-quickspot](https://github.com/CBryant9/redirectpage-quickspot)
+**GitHub Repository:** [https://github.com/CBryant9/quick-spot-website](https://github.com/CBryant9/quick-spot-website)
 
 ## Features
 

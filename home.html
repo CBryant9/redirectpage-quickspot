@@ -181,43 +181,100 @@
         .problem h2 {
             font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .problem-subheading {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #ea580c;
+            font-weight: 700;
+        }
+
+        .problem-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .screenshot-box {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f1f5f9;
+        }
+
+        .laptop-mockup {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            border-radius: 12px;
+            border: 8px solid #334155;
+            border-bottom-width: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .laptop-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #fafafa 0%, #f1f5f9 100%);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .extension-features {
+            text-align: left;
+        }
+
+        .features-heading {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
             color: #1a1a1a;
             font-weight: 700;
         }
 
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+        .features-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        .problem-item {
-            background: #fafafa;
-            padding: 2.5rem;
-            border-radius: 16px;
-            text-align: left;
-            border: 1px solid #f1f5f9;
-            transition: all 0.3s ease;
-        }
-
-        .problem-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border-color: rgba(234, 88, 12, 0.1);
-        }
-
-        .problem-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #dc2626;
-            font-weight: 600;
-        }
-
-        .problem-item p {
-            color: #64748b;
+        .features-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            color: #475569;
             line-height: 1.6;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            background: #ea580c;
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-weight: bold;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            margin-top: 2px;
         }
 
         /* Solution Section */
@@ -464,7 +521,8 @@
                 padding: 0 20px;
             }
 
-            .solution-content {
+            .solution-content,
+            .problem-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
@@ -479,9 +537,16 @@
                 display: none;
             }
 
-            .features-grid,
-            .problem-grid {
+            .features-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .problem h2 {
+                font-size: 2rem;
+            }
+
+            .problem-subheading {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -509,7 +574,7 @@
                     Get the exact company and deal information you need in seconds, not minutes.
                     No more clicking through endless HubSpot views.
                 </p>
-                <a href="#install" class="cta-primary">Start 14-Day Free Trial</a>
+                <a href="#install" class="cta-primary">Install Chrome Extension</a>
                 <p class="hero-note">⚡ Install in 30 seconds • Works inside HubSpot • Cancel anytime</p>
             </div>
         </div>
@@ -518,23 +583,29 @@
     <!-- Problem Section -->
     <section class="problem">
         <div class="container">
-            <h2>Does This Sound Like You?</h2>
-            <div class="problem-grid">
-                <div class="problem-item">
-                    <h3>😤 Tired of having 5 tabs open to find 1 thing?</h3>
-                    <p>Company tab, deals tab, contacts tab, properties tab—just to answer "does this prospect have an active deal?" You shouldn't need a browser full of tabs for basic info.</p>
+            <h2>Tired of cluttered, busy and time wasting HubSpot views?</h2>
+            <h3 class="problem-subheading">Quick Spot can help</h3>
+
+            <div class="problem-content">
+                <div class="screenshot-box">
+                    <div class="laptop-mockup">
+                        <div class="laptop-screen">
+                            <p style="color: #94a3b8; font-size: 0.95rem;">Chrome Extension Screenshot</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="problem-item">
-                    <h3>🔍 Clicking through different types of records trying to connect the dots?</h3>
-                    <p>Navigate from company → associated deals → back to company → contact records. By the time you piece it together, you've forgotten why you started looking.</p>
-                </div>
-                <div class="problem-item">
-                    <h3>🌊 Wading through hundreds of properties that you don't need?</h3>
-                    <p>Scrolling past 47 custom fields just to find deal stage and close date. HubSpot shows you everything when you only care about 6 things.</p>
-                </div>
-                <div class="problem-item">
-                    <h3>🙏 Trying to get your admins to build something that works for you, not everybody?</h3>
-                    <p>You need a view for your workflow, but IT builds for the "average user." Three weeks later you're still waiting for something that actually helps you sell.</p>
+
+                <div class="extension-features">
+                    <h4 class="features-heading">In this Chrome extension:</h4>
+                    <ul class="features-list">
+                        <li>See company + deals in one clean view</li>
+                        <li>Choose exactly which properties to display</li>
+                        <li>No admin access required</li>
+                        <li>Updates in real-time with your HubSpot data</li>
+                        <li>Works on any HubSpot page</li>
+                        <li>Customizable sidebar that fits your workflow</li>
+                        <li>Instant access to your most important data points</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -681,8 +752,8 @@
             });
         }, observerOptions);
 
-        // Observe all feature cards and problem items
-        document.querySelectorAll('.feature-card, .problem-item, .solution-content > div').forEach(el => {
+        // Observe all feature cards and content sections
+        document.querySelectorAll('.feature-card, .problem-content > div, .solution-content > div').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

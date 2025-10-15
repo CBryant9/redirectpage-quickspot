@@ -87,69 +87,81 @@
 
         /* Pricing Hero */
         .pricing-hero {
-            min-height: 40vh;
+            min-height: 90vh;
             background: linear-gradient(135deg, #fef7ed 0%, #fff7ed 50%, #fed7aa 100%);
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
             padding-top: 100px;
+            padding-bottom: 4rem;
         }
 
-        .pricing-hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+        .pricing-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .pricing-hero-left h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             font-weight: 800;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             line-height: 1.1;
             letter-spacing: -0.03em;
             color: #1a1a1a;
-            text-align: center;
         }
 
-        .pricing-hero-subtitle {
-            font-size: 1.3rem;
-            color: #64748b;
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
+        .pricing-hero-left p {
+            font-size: 1.2rem;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 2rem;
         }
 
-        /* Pricing Section */
-        .pricing-section {
-            padding: 6rem 0;
-            background: white;
+        .hero-benefits {
+            list-style: none;
+            margin: 2rem 0;
         }
 
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            max-width: 1100px;
-            margin: 0 auto;
+        .hero-benefits li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            color: #475569;
+            line-height: 1.6;
         }
 
-        .pricing-card {
+        .hero-benefits li::before {
+            content: '✓';
+            background: #ea580c;
+            color: white;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .hero-pricing-card {
             background: white;
             padding: 3rem 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-            border: 2px solid #e2e8f0;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+            border: 2px solid #ea580c;
             position: relative;
             overflow: hidden;
-            transition: all 0.3s ease;
         }
 
-        .pricing-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
-        }
-
-        .pricing-card.featured {
-            border: 2px solid #ea580c;
-            transform: scale(1.05);
-        }
-
-        .pricing-card.featured::before {
+        .hero-pricing-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -159,99 +171,72 @@
             background: linear-gradient(90deg, #ea580c, #c2410c);
         }
 
-        .pricing-badge {
-            background: #ea580c;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-
-        .pricing-card h3 {
+        .hero-pricing-card h3 {
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 1rem;
             color: #1a1a1a;
         }
 
-        .price {
-            font-size: 3rem;
+        .hero-price {
+            font-size: 3.5rem;
             font-weight: bold;
             margin: 1.5rem 0;
             color: #1a1a1a;
         }
 
-        .price-note {
+        .hero-price-note {
             color: #64748b;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-size: 0.95rem;
         }
 
-        .pricing-features {
-            list-style: none;
-            margin: 2rem 0;
-            text-align: left;
+        .trial-badge {
+            background: #16a34a;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: inline-block;
         }
 
-        .pricing-features li {
-            margin-bottom: 1rem;
-            padding-left: 1.8rem;
-            position: relative;
-            color: #475569;
-            line-height: 1.6;
-        }
-
-        .pricing-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #ea580c;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .cta-button {
+        .hero-cta {
             display: block;
             width: 100%;
             background: #ea580c;
             color: white;
-            padding: 1.2rem 2rem;
-            font-size: 1.1rem;
+            padding: 1.3rem 2rem;
+            font-size: 1.2rem;
             font-weight: 600;
             text-decoration: none;
             border-radius: 12px;
             transition: all 0.3s ease;
             box-shadow: 0 8px 25px rgba(234, 88, 12, 0.25);
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
-        .cta-button:hover {
+        .hero-cta:hover {
             background: #c2410c;
             transform: translateY(-2px);
             box-shadow: 0 12px 35px rgba(234, 88, 12, 0.35);
         }
 
-        .cta-button.secondary {
-            background: white;
-            color: #ea580c;
-            border: 2px solid #ea580c;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        .review-note {
+            font-size: 0.85rem;
+            color: #64748b;
+            text-align: center;
+            margin-top: 1rem;
+            font-style: italic;
         }
 
-        .cta-button.secondary:hover {
-            background: #fef7ed;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        }
 
         /* FAQ Section */
         .faq-section {
             padding: 6rem 0;
-            background: linear-gradient(135deg, #fef7ed 0%, #fff7ed 100%);
+            background: white;
         }
 
         .faq-section h2 {
@@ -337,21 +322,36 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .pricing-hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
 
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-
             .container {
                 padding: 0 20px;
+            }
+
+            .pricing-hero-left h1 {
+                font-size: 2rem;
+            }
+
+            .pricing-hero-left p {
+                font-size: 1rem;
+            }
+
+            .hero-benefits li {
+                font-size: 1rem;
+            }
+
+            .hero-price {
+                font-size: 3rem;
             }
         }
     </style>
@@ -372,62 +372,33 @@
     <!-- Pricing Hero -->
     <section class="pricing-hero">
         <div class="container">
-            <h1>Simple, Transparent Pricing</h1>
-            <p class="pricing-hero-subtitle">
-                Start with a 14-day free trial. No credit card required.
-            </p>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing-section">
-        <div class="container">
-            <div class="pricing-grid">
-                <!-- Free Plan -->
-                <div class="pricing-card">
-                    <h3>Free Trial</h3>
-                    <div class="price">$0</div>
-                    <p class="price-note">14 days, then choose a plan</p>
-                    <ul class="pricing-features">
-                        <li>Full access to all features</li>
-                        <li>Unlimited custom views</li>
-                        <li>View all HubSpot properties</li>
-                        <li>No credit card required</li>
+            <div class="pricing-hero-content">
+                <div class="pricing-hero-left">
+                    <h1>Low Pricing, High Value</h1>
+                    <p>
+                        Quick Spot costs less than 1 hour of your salary per month and saves you that time in just one day of using the extension.
+                    </p>
+                    <ul class="hero-benefits">
+                        <li>Reclaim hours every week by instantly finding the data you need</li>
+                        <li>Eliminate tab-switching chaos and mental fatigue from cluttered views</li>
+                        <li>Make better decisions faster with all relevant information in one place</li>
+                        <li>Customize your workspace without waiting for admin approvals</li>
                     </ul>
-                    <a href="#install" class="cta-button secondary">Start Free Trial</a>
                 </div>
-
-                <!-- Pro Plan -->
-                <div class="pricing-card featured">
-                    <span class="pricing-badge">MOST POPULAR</span>
-                    <h3>Professional</h3>
-                    <div class="price">$15</div>
-                    <p class="price-note">per user / month</p>
-                    <ul class="pricing-features">
-                        <li>Everything in Free Trial</li>
-                        <li>Unlimited custom views</li>
-                        <li>View all object types</li>
-                        <li>Priority support</li>
-                        <li>Regular feature updates</li>
-                        <li>Cancel anytime</li>
-                    </ul>
-                    <a href="#install" class="cta-button">Get Started</a>
-                </div>
-
-                <!-- Enterprise Plan -->
-                <div class="pricing-card">
-                    <h3>Team</h3>
-                    <div class="price">$12</div>
-                    <p class="price-note">per user / month (min 5 users)</p>
-                    <ul class="pricing-features">
-                        <li>Everything in Professional</li>
-                        <li>Team view templates</li>
-                        <li>Bulk user management</li>
-                        <li>Dedicated support</li>
-                        <li>Custom onboarding</li>
-                        <li>Volume discounts available</li>
-                    </ul>
-                    <a href="mailto:quickspot.help@gmail.com" class="cta-button secondary">Contact Sales</a>
+                <div class="pricing-hero-right">
+                    <div class="hero-pricing-card">
+                        <h3>Professional</h3>
+                        <div class="hero-price">$15</div>
+                        <p class="hero-price-note">per user / month</p>
+                        <div class="trial-badge">2 Week Free Trial</div>
+                        <p style="color: #475569; font-size: 0.95rem; margin-bottom: 1rem;">
+                            Get full access to all features. No credit card required.
+                        </p>
+                        <a href="https://chrome.google.com/webstore" class="hero-cta">Start Free Today</a>
+                        <p class="review-note">
+                            Leave a review and get an extra 2 weeks free (1 month total!)
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

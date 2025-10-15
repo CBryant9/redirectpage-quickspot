@@ -179,11 +179,12 @@
         }
 
         .benefits h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             text-align: center;
             margin-bottom: 1rem;
             color: #1a1a1a;
-            font-weight: 700;
+            font-weight: 800;
+            line-height: 1.2;
         }
 
         .benefits-subheading {
@@ -198,22 +199,29 @@
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
         }
 
         .benefit-card {
-            background: #fafafa;
+            background: white;
             padding: 2.5rem;
             border-radius: 16px;
             transition: all 0.3s ease;
-            border: 1px solid #f1f5f9;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .benefit-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border-color: rgba(234, 88, 12, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            border-color: rgba(234, 88, 12, 0.3);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
         }
 
         .benefit-card h3 {
@@ -572,6 +580,12 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 1024px) {
             .container {
                 padding: 0 20px;
@@ -649,18 +663,22 @@
 
             <div class="benefits-grid">
                 <div class="benefit-card">
+                    <div class="benefit-icon">⏱️</div>
                     <h3>Save hours per day</h3>
                     <p>Tab switching, clicking and looking for specific properties amongst hundreds you don't need.</p>
                 </div>
                 <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
                     <h3>Stop feeling overwhelmed</h3>
                     <p>By the clutter and chaos of the native HubSpot layout and see it in a tidy convenient side panel.</p>
                 </div>
                 <div class="benefit-card">
+                    <div class="benefit-icon">🎨</div>
                     <h3>Make HubSpot your own</h3>
                     <p>By creating custom views just for you, no limits of your admin having to build one for you or you adapt to one built for the whole company.</p>
                 </div>
                 <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
                     <h3>See everything you need on one screen</h3>
                     <p>Including being able to see contact, company and deal properties together on the same page without opening a thousand tabs.</p>
                 </div>

@@ -236,6 +236,132 @@
             line-height: 1.6;
         }
 
+        /* How It Works Section */
+        .how-it-works {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #fef7ed 0%, #fff7ed 100%);
+        }
+
+        .how-it-works h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #1a1a1a;
+            font-weight: 800;
+        }
+
+        .how-it-works-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+            align-items: flex-start;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .timeline-step {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            padding-bottom: 2.5rem;
+        }
+
+        .timeline-step:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #cbd5e1;
+            border: 3px solid #cbd5e1;
+            flex-shrink: 0;
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-step.active .timeline-dot {
+            background: #ea580c;
+            border-color: #ea580c;
+            box-shadow: 0 0 0 6px rgba(234, 88, 12, 0.2);
+        }
+
+        .timeline-connector {
+            position: absolute;
+            left: 9px;
+            top: 20px;
+            width: 2px;
+            height: 100%;
+            background: #cbd5e1;
+            transition: all 0.5s ease;
+        }
+
+        .timeline-step.active .timeline-connector {
+            background: linear-gradient(to bottom, #ea580c, #cbd5e1);
+        }
+
+        .timeline-step.completed .timeline-connector {
+            background: #ea580c;
+        }
+
+        .timeline-text {
+            margin-left: 1.5rem;
+            font-size: 1.1rem;
+            color: #475569;
+            transition: all 0.3s ease;
+            padding-top: 0;
+        }
+
+        .timeline-step.active .timeline-text {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .step-number {
+            font-weight: 700;
+            color: inherit;
+        }
+
+        .screenshot-showcase {
+            position: sticky;
+            top: 100px;
+        }
+
+        .screenshot-frame {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f1f5f9;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .screenshot-content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            padding: 3rem;
+        }
+
+        .screenshot-content.active {
+            opacity: 1;
+        }
+
         /* Problem Section */
         .problem {
             padding: 6rem 0;
@@ -592,9 +718,20 @@
             }
 
             .solution-content,
-            .problem-content {
+            .problem-content,
+            .how-it-works-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
+            }
+
+            .how-it-works-content {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .screenshot-showcase {
+                position: relative;
+                top: 0;
             }
         }
 
@@ -621,6 +758,10 @@
             }
 
             .benefits h2 {
+                font-size: 2rem;
+            }
+
+            .how-it-works h2 {
                 font-size: 2rem;
             }
         }
@@ -681,6 +822,92 @@
                     <div class="benefit-icon">📊</div>
                     <h3>See everything you need on one screen</h3>
                     <p>Including being able to see contact, company and deal properties together on the same page without opening a thousand tabs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How it works</h2>
+
+            <div class="how-it-works-content">
+                <div class="timeline">
+                    <div class="timeline-step" data-step="1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-text">
+                            <span class="step-number">1.</span> Download the extension
+                        </div>
+                    </div>
+                    <div class="timeline-step" data-step="2">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-text">
+                            <span class="step-number">2.</span> Sign up to Quick Spot
+                        </div>
+                    </div>
+                    <div class="timeline-step" data-step="3">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-text">
+                            <span class="step-number">3.</span> Create your custom View
+                        </div>
+                    </div>
+                    <div class="timeline-step" data-step="4">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-text">
+                            <span class="step-number">4.</span> Open a HubSpot record
+                        </div>
+                    </div>
+                    <div class="timeline-step" data-step="5">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-text">
+                            <span class="step-number">5.</span> Click Connect to HubSpot
+                        </div>
+                    </div>
+                    <div class="timeline-step" data-step="6">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-text">
+                            <span class="step-number">6.</span> View that record in your custom view
+                        </div>
+                    </div>
+                    <div class="timeline-step" data-step="7">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-text">
+                            <span class="step-number">7.</span> Repeat to create views for all your different tasks
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screenshot-showcase">
+                    <div class="screenshot-frame">
+                        <div class="screenshot-content active" data-screenshot="1">
+                            <p style="color: #64748b;">Step 1: Download Extension</p>
+                        </div>
+                        <div class="screenshot-content" data-screenshot="2">
+                            <p style="color: #64748b;">Step 2: Sign Up</p>
+                        </div>
+                        <div class="screenshot-content" data-screenshot="3">
+                            <p style="color: #64748b;">Step 3: Create Custom View</p>
+                        </div>
+                        <div class="screenshot-content" data-screenshot="4">
+                            <p style="color: #64748b;">Step 4: Open HubSpot Record</p>
+                        </div>
+                        <div class="screenshot-content" data-screenshot="5">
+                            <p style="color: #64748b;">Step 5: Connect to HubSpot</p>
+                        </div>
+                        <div class="screenshot-content" data-screenshot="6">
+                            <p style="color: #64748b;">Step 6: View in Custom View</p>
+                        </div>
+                        <div class="screenshot-content" data-screenshot="7">
+                            <p style="color: #64748b;">Step 7: Create More Views</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -865,6 +1092,49 @@
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+
+        // Timeline Animation
+        let currentStep = 1;
+        const totalSteps = 7;
+        const stepDuration = 3000; // 3 seconds per step
+
+        function updateTimeline() {
+            // Remove all active and completed classes
+            document.querySelectorAll('.timeline-step').forEach(step => {
+                step.classList.remove('active', 'completed');
+            });
+
+            // Remove all active classes from screenshots
+            document.querySelectorAll('.screenshot-content').forEach(screenshot => {
+                screenshot.classList.remove('active');
+            });
+
+            // Mark previous steps as completed
+            for (let i = 1; i < currentStep; i++) {
+                const step = document.querySelector(`.timeline-step[data-step="${i}"]`);
+                if (step) step.classList.add('completed');
+            }
+
+            // Mark current step as active
+            const activeStep = document.querySelector(`.timeline-step[data-step="${currentStep}"]`);
+            if (activeStep) activeStep.classList.add('active');
+
+            // Show current screenshot
+            const activeScreenshot = document.querySelector(`.screenshot-content[data-screenshot="${currentStep}"]`);
+            if (activeScreenshot) activeScreenshot.classList.add('active');
+
+            // Move to next step
+            currentStep++;
+            if (currentStep > totalSteps) {
+                currentStep = 1;
+            }
+        }
+
+        // Initialize first step
+        updateTimeline();
+
+        // Auto-progress through steps
+        setInterval(updateTimeline, stepDuration);
     </script>
 </body>
 </html>

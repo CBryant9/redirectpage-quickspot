@@ -172,6 +172,62 @@
             margin-top: 1rem;
         }
 
+        /* Benefits Section */
+        .benefits {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .benefits h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+
+        .benefits-subheading {
+            font-size: 1.2rem;
+            color: #64748b;
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: #fafafa;
+            padding: 2.5rem;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-color: rgba(234, 88, 12, 0.1);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .benefit-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
         /* Problem Section */
         .problem {
             padding: 6rem 0;
@@ -537,7 +593,8 @@
                 display: none;
             }
 
-            .features-grid {
+            .features-grid,
+            .benefits-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -547,6 +604,10 @@
 
             .problem-subheading {
                 font-size: 1.8rem;
+            }
+
+            .benefits h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -576,6 +637,33 @@
                 </p>
                 <a href="#install" class="cta-primary">Install Chrome Extension</a>
                 <p class="hero-note">⚡ Install in 30 seconds • Works inside HubSpot • Cancel anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2>A chrome extension that saves you hours in HubSpot</h2>
+            <p class="benefits-subheading">with Quick Spot you can:</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Save hours per day</h3>
+                    <p>Tab switching, clicking and looking for specific properties amongst hundreds you don't need.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Stop feeling overwhelmed</h3>
+                    <p>By the clutter and chaos of the native HubSpot layout and see it in a tidy convenient side panel.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Make HubSpot your own</h3>
+                    <p>By creating custom views just for you, no limits of your admin having to build one for you or you adapt to one built for the whole company.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>See everything you need on one screen</h3>
+                    <p>Including being able to see contact, company and deal properties together on the same page without opening a thousand tabs.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -752,8 +840,8 @@
             });
         }, observerOptions);
 
-        // Observe all feature cards and content sections
-        document.querySelectorAll('.feature-card, .problem-content > div, .solution-content > div').forEach(el => {
+        // Observe all cards and content sections
+        document.querySelectorAll('.feature-card, .benefit-card, .problem-content > div, .solution-content > div').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

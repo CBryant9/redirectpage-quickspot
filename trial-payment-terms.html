@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trial & Payment Terms - Quick Spot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #FEFCF8;
+            color: #2d2d2d;
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #87ceeb 0%, #ff6b35 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+            stroke: white;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2d2d2d;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .last-updated {
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .section {
+            background-color: #FFFBF5;
+            border: 1px solid #F5E6D3;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .section h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ff6b35;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #87ceeb 0%, #ff6b35 100%);
+            border-radius: 2px;
+            margin-right: 12px;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        .section p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .section ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        .section li {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background-color: #FFF4E6;
+            border-left: 4px solid #ff6b35;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(135, 206, 235, 0.1) 0%, rgba(255, 107, 53, 0.1) 100%);
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .contact-section h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-bottom: 12px;
+        }
+
+        .contact-section p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 16px;
+        }
+
+        .email-link {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #87ceeb 0%, #ff6b35 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+
+        .footer-links {
+            text-align: center;
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #F5E6D3;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .footer-links a:hover {
+            color: #888;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .section {
+                padding: 25px 20px;
+            }
+
+            .section h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                </svg>
+            </div>
+            <h1>Trial & Payment Terms</h1>
+            <p class="subtitle">Everything you need to know about Quick Spot's trial and billing</p>
+        </div>
+
+        <p class="last-updated">Last Updated: January 2025</p>
+
+        <!-- Free Trial Section -->
+        <div class="section">
+            <h2>Free Trial Period</h2>
+            <p>Quick Spot offers a generous trial period to ensure our service is the right fit for you:</p>
+
+            <div class="highlight-box">
+                <p>All new users receive a 14-day free trial with full access to all Quick Spot features.</p>
+            </div>
+
+            <ul>
+                <li><strong>Full Feature Access:</strong> During your trial, you'll have unlimited access to all premium features, including unlimited spot saving, advanced search, and priority support.</li>
+                <li><strong>No Credit Card Required:</strong> Start your trial immediately without providing payment information.</li>
+                <li><strong>Trial Extensions:</strong> Need more time to evaluate? Contact us at quickspot.help@gmail.com for a trial extension.</li>
+                <li><strong>Trial Expiration:</strong> At the end of your trial, you'll be prompted to add payment details to continue using Quick Spot.</li>
+            </ul>
+        </div>
+
+        <!-- Payment Terms Section -->
+        <div class="section">
+            <h2>Payment Terms</h2>
+
+            <h3>Subscription Plans</h3>
+            <p>Quick Spot operates on a subscription-based model with flexible billing options:</p>
+            <ul>
+                <li><strong>Monthly Plan:</strong> Billed monthly, cancel anytime</li>
+                <li><strong>Annual Plan:</strong> Billed annually, save 20% compared to monthly billing</li>
+            </ul>
+
+            <h3>Billing Cycle</h3>
+            <p>Your billing cycle begins on the date you subscribe and renews automatically based on your chosen plan (monthly or annually).</p>
+
+            <h3>Payment Methods</h3>
+            <p>We accept all major credit and debit cards through our secure payment processor, Stripe. Your payment information is encrypted and never stored on our servers.</p>
+
+            <h3>Price Changes</h3>
+            <p>We reserve the right to adjust pricing with at least 30 days advance notice. Existing subscribers will be notified via email before any price changes take effect. Price changes will not apply to the current billing period.</p>
+        </div>
+
+        <!-- Refund Policy Section -->
+        <div class="section">
+            <h2>Refund Policy</h2>
+
+            <div class="highlight-box">
+                <p>Your satisfaction is our priority. We offer a 30-day money-back guarantee on all subscriptions.</p>
+            </div>
+
+            <h3>30-Day Money-Back Guarantee</h3>
+            <p>If you're not completely satisfied with Quick Spot within the first 30 days of your subscription, we'll provide a full refund, no questions asked.</p>
+
+            <h3>How to Request a Refund</h3>
+            <ul>
+                <li>Email us at <strong>quickspot.help@gmail.com</strong> with "Refund Request" in the subject line</li>
+                <li>Include your account email and subscription details</li>
+                <li>We'll process your refund within 5-7 business days</li>
+            </ul>
+
+            <h3>Refunds After 30 Days</h3>
+            <p>After the initial 30-day period, refunds are evaluated on a case-by-case basis. We're committed to fair treatment and will work with you to resolve any issues.</p>
+
+            <h3>Pro-Rated Refunds</h3>
+            <p>For annual subscriptions canceled after the 30-day guarantee period, we may offer pro-rated refunds at our discretion based on the unused portion of your subscription.</p>
+        </div>
+
+        <!-- Cancellation Policy Section -->
+        <div class="section">
+            <h2>Cancellation Policy</h2>
+
+            <p>You have complete control over your subscription and can cancel at any time:</p>
+
+            <h3>How to Cancel</h3>
+            <ul>
+                <li>Access your Quick Spot extension settings</li>
+                <li>Navigate to "Subscription Management"</li>
+                <li>Click "Cancel Subscription"</li>
+                <li>Or email us at quickspot.help@gmail.com to cancel</li>
+            </ul>
+
+            <h3>What Happens When You Cancel</h3>
+            <ul>
+                <li><strong>Immediate Effect:</strong> Cancellation takes effect at the end of your current billing period</li>
+                <li><strong>Access Retained:</strong> You'll continue to have full access until the end of your paid period</li>
+                <li><strong>Data Preservation:</strong> Your saved spots and settings are preserved for 90 days after cancellation</li>
+                <li><strong>Easy Reactivation:</strong> Reactivate your account at any time to restore full access</li>
+            </ul>
+
+            <h3>No Cancellation Fees</h3>
+            <p>We never charge cancellation fees. You're free to cancel your subscription at any time without penalty.</p>
+        </div>
+
+        <!-- Additional Terms Section -->
+        <div class="section">
+            <h2>Additional Terms</h2>
+
+            <h3>Auto-Renewal</h3>
+            <p>Your subscription will automatically renew at the end of each billing period unless you cancel before the renewal date. You'll receive a reminder email 7 days before renewal.</p>
+
+            <h3>Failed Payments</h3>
+            <p>If a payment fails, we'll attempt to process it up to 3 times over 7 days. If payment cannot be processed, your subscription will be suspended until payment is updated.</p>
+
+            <h3>Account Sharing</h3>
+            <p>Quick Spot subscriptions are for individual use. Each user requires their own subscription. Business and team plans with shared access are coming soon.</p>
+
+            <h3>Service Changes</h3>
+            <p>We continuously improve Quick Spot. While we strive to maintain and enhance all features, we reserve the right to modify, suspend, or discontinue any feature with reasonable notice.</p>
+
+            <h3>Currency</h3>
+            <p>All prices are listed in USD. International users may incur currency conversion fees from their payment provider.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h3>Questions About Billing?</h3>
+            <p>Our support team is here to help with any questions about trials, payments, or refunds.</p>
+            <a href="mailto:quickspot.help@gmail.com" class="email-link">Contact Support</a>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <a href="/">Home</a> •
+            <a href="/connection-url">Connection URL</a> •
+            <a href="/privacy-policy.html">Privacy Policy</a> •
+            <a href="https://tally.so/" target="_blank">Become a Beta Tester</a>
+        </div>
+    </div>
+</body>
+</html>

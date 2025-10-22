@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connection Setup - Quick Spot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #FEFCF8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        .logo svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2d2d2d;
+            margin-bottom: 20px;
+        }
+
+        .instructions-box {
+            background-color: #FFFBF5;
+            border: 2px solid #ff6b35;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(255, 107, 53, 0.1);
+        }
+
+        .instructions-text {
+            font-size: 18px;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .download-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+            color: white;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+
+        .download-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4);
+        }
+
+        .download-link:active {
+            transform: translateY(0);
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: #888;
+            margin-top: 30px;
+        }
+
+        .brand {
+            font-weight: 600;
+            color: #ff6b35;
+        }
+
+        .privacy-link {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 20px;
+        }
+
+        .privacy-link a {
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        .privacy-link a:hover {
+            color: #ff6b35;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
+            </svg>
+        </div>
+
+        <h1>Thanks for connecting to Quick Spot</h1>
+
+        <div class="instructions-box">
+            <p class="instructions-text">
+                If you haven't already- please download the Quick Spot extension to start viewing your HubSpot data
+            </p>
+            <a href="#" class="download-link">Download Quick Spot Extension</a>
+        </div>
+
+        <p class="footer-text">
+            Questions? Contact us at <span class="brand">quickspot.help@gmail.com</span>
+        </p>
+
+        <p class="privacy-link">
+            <a href="/">Back to Home</a> • <a href="/privacy-policy.html">Privacy Policy</a>
+        </p>
+    </div>
+</body>
+</html>

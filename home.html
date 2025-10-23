@@ -27,32 +27,41 @@
 
         /* Header */
         header {
-            background: rgba(250, 250, 250, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 0;
+            padding: 1.2rem 0;
         }
 
         .logo {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            color: #ea580c;
+            color: #1a1a1a;
             letter-spacing: -0.02em;
+        }
+
+        .nav-center {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .nav-links {
             display: flex;
-            gap: 3rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
@@ -61,48 +70,42 @@
             color: #64748b;
             font-weight: 500;
             font-size: 0.95rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #ea580c;
-            transition: width 0.3s ease;
+            transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: #ea580c;
+            color: #1a1a1a;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
+        .nav-cta {
+            background: #1a1a1a;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-cta:hover {
+            background: #2d2d2d;
+            transform: translateY(-1px);
         }
 
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, #fef7ed 0%, #fff7ed 50%, #fed7aa 100%);
+            background: linear-gradient(180deg, #f0f9ff 0%, #fef7ed 50%, #ffffff 100%);
             display: flex;
             align-items: center;
+            justify-content: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 60%;
-            background: linear-gradient(135deg, rgba(234, 88, 12, 0.05) 0%, rgba(194, 65, 12, 0.1) 100%);
-            border-radius: 200px 0 0 200px;
+            padding-top: 80px;
         }
 
         .hero .container {
@@ -112,62 +115,87 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 700px;
-            text-align: left;
+            max-width: 900px;
+            text-align: center;
+            margin: 0 auto;
         }
 
         .hero-badge {
-            display: inline-block;
-            background: rgba(234, 88, 12, 0.1);
-            color: #ea580c;
-            padding: 0.5rem 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #1a1a1a;
+            color: white;
+            padding: 0.4rem 0.7rem 0.4rem 1rem;
             border-radius: 50px;
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 2rem;
-            border: 1px solid rgba(234, 88, 12, 0.2);
+        }
+
+        .hero-badge-text {
+            color: #64748b;
+            background: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
         }
 
         .hero h1 {
             font-size: clamp(3rem, 6vw, 4.5rem);
             font-weight: 800;
-            margin-bottom: 2rem;
-            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
             letter-spacing: -0.03em;
             color: #1a1a1a;
         }
 
         .hero-subtitle {
             font-size: 1.3rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             color: #64748b;
             line-height: 1.6;
             font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .beta-offer {
             font-size: 1.1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             color: #3b82f6;
             line-height: 1.6;
             font-weight: 500;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
         }
 
         .cta-primary {
             display: inline-flex;
             align-items: center;
+            gap: 0.5rem;
             background: linear-gradient(135deg, #87ceeb 0%, #ff6b35 100%);
             color: white;
-            padding: 1.2rem 2.5rem;
-            font-size: 1.1rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 50px;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(135, 206, 235, 0.4);
-            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
             position: relative;
             overflow: hidden;
+            border: none;
         }
 
         .cta-primary::before {
@@ -197,7 +225,27 @@
 
         .cta-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(135, 206, 235, 0.5);
+            box-shadow: 0 6px 20px rgba(135, 206, 235, 0.4);
+        }
+
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: #1a1a1a;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+
+        .cta-secondary:hover {
+            border-color: #cbd5e1;
+            background: rgba(0, 0, 0, 0.02);
         }
 
         .hero-note {
@@ -945,12 +993,22 @@
         }
 
         @media (max-width: 768px) {
-            .nav-links {
+            .nav-center {
                 display: none;
             }
 
-            .hero::before {
-                display: none;
+            .nav-cta {
+                font-size: 0.85rem;
+                padding: 0.6rem 1.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons a {
+                width: 100%;
+                justify-content: center;
             }
 
             .features-grid,
@@ -1004,11 +1062,20 @@
     <header>
         <nav class="container">
             <div class="logo">Quick Spot</div>
-            <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="#install">Install</a></li>
-            </ul>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                </ul>
+            </div>
+            <a href="https://tally.so/r/wabNjE" class="nav-cta" target="_blank">
+                Become a Beta Tester
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 17L17 7"></path>
+                    <path d="M7 7h10v10"></path>
+                </svg>
+            </a>
         </nav>
     </header>
 
@@ -1016,15 +1083,34 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">⚡ Start today for free</div>
+                <div class="hero-badge">
+                    New
+                    <span class="hero-badge-text">
+                        Beta Program Now Open
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-left: 4px;">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </span>
+                </div>
                 <h1>Stop Hunting for Your HubSpot Data</h1>
                 <p class="hero-subtitle">
                     Get the exact company and deal information you need in seconds. No more clicking through endless cluttered Hubspot views.
                 </p>
                 <p class="beta-offer">
-                    We are currently offering 3 months FREE to people that would like to test this out and provide feedback on how we can improve and make changes to better suit your needs. Click the button below to become a beta tester today!
+                    We are currently offering 3 months FREE to people that would like to test this out and provide feedback on how we can improve and make changes to better suit your needs. Click the buttons below to become a beta tester today!
                 </p>
-                <a href="https://tally.so/r/wabNjE" class="cta-primary" target="_blank">Try Quick Spot today</a>
+                <div class="hero-buttons">
+                    <a href="https://tally.so/r/wabNjE" class="cta-primary" target="_blank">
+                        Become a Beta Tester
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17L17 7"></path>
+                            <path d="M7 7h10v10"></path>
+                        </svg>
+                    </a>
+                    <a href="#features" class="cta-secondary">
+                        Learn More
+                    </a>
+                </div>
                 <p class="hero-note">⚡ Install in 30 seconds • Works inside HubSpot • Cancel anytime</p>
             </div>
         </div>
@@ -1041,7 +1127,7 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="benefits">
+    <section class="benefits" id="features">
         <div class="container">
             <h2>A chrome extension that saves you hours in HubSpot</h2>
             <p class="benefits-subheading">with Quick Spot you can:</p>
@@ -1114,7 +1200,7 @@
     </section>
 
     <!-- How It Works Section -->
-    <section class="how-it-works">
+    <section class="how-it-works" id="how-it-works">
         <div class="container">
             <h2>How it works</h2>
 

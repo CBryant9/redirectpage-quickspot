@@ -238,6 +238,22 @@
             grid-template-columns: 1fr 1fr;
         }
 
+        .feature-showcase-content .feature-visual {
+            order: 2;
+        }
+
+        .feature-showcase-content .feature-text {
+            order: 1;
+        }
+
+        .feature-showcase-content.reverse .feature-visual {
+            order: 1;
+        }
+
+        .feature-showcase-content.reverse .feature-text {
+            order: 2;
+        }
+
         .feature-text {
             padding: 2rem 0;
         }
@@ -1179,6 +1195,16 @@
                 gap: 3rem;
             }
 
+            .feature-showcase-content .feature-visual,
+            .feature-showcase-content.reverse .feature-visual {
+                order: 1;
+            }
+
+            .feature-showcase-content .feature-text,
+            .feature-showcase-content.reverse .feature-text {
+                order: 2;
+            }
+
             .how-it-works-content {
                 display: flex;
                 flex-direction: column-reverse;
@@ -1379,15 +1405,10 @@
         </div>
     </section>
 
-    <!-- Feature Showcase 1 - Visual Left, Text Right -->
+    <!-- Feature Showcase 1 - Text Left, Visual Right -->
     <section class="feature-showcase">
         <div class="container">
-            <div class="feature-showcase-content reverse">
-                <div class="feature-visual">
-                    <div class="feature-visual-placeholder">
-                        Feature Visualization
-                    </div>
-                </div>
+            <div class="feature-showcase-content">
                 <div class="feature-text">
                     <div class="feature-brow">🎨 Fully Customizable</div>
                     <h2>Build Views That Work For You</h2>
@@ -1405,14 +1426,24 @@
                         </svg>
                     </a>
                 </div>
+                <div class="feature-visual">
+                    <div class="feature-visual-placeholder">
+                        Feature Visualization
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Feature Showcase 2 - Text Left, Visual Right -->
+    <!-- Feature Showcase 2 - Visual Left, Text Right -->
     <section class="feature-showcase alt-bg">
         <div class="container">
-            <div class="feature-showcase-content">
+            <div class="feature-showcase-content reverse">
+                <div class="feature-visual">
+                    <div class="feature-visual-placeholder">
+                        Feature Visualization
+                    </div>
+                </div>
                 <div class="feature-text">
                     <div class="feature-brow">⚡ All In One Place</div>
                     <h2>See Associated Records Details in the Same Convenient Side Panel</h2>
@@ -1432,11 +1463,6 @@
                             <path d="M7 7h10v10"></path>
                         </svg>
                     </a>
-                </div>
-                <div class="feature-visual">
-                    <div class="feature-visual-placeholder">
-                        Feature Visualization
-                    </div>
                 </div>
             </div>
         </div>

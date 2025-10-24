@@ -105,7 +105,7 @@
         /* Pricing Hero */
         .pricing-hero {
             min-height: 90vh;
-            background: linear-gradient(135deg, #fef7ed 0%, #fff7ed 50%, #fed7aa 100%);
+            background: linear-gradient(180deg, #f0f9ff 0%, #fef7ed 50%, #ffffff 100%);
             display: flex;
             align-items: center;
             position: relative;
@@ -116,7 +116,7 @@
 
         .pricing-hero-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.4fr 0.9fr;
             gap: 5rem;
             align-items: center;
         }
@@ -151,101 +151,93 @@
             line-height: 1.6;
         }
 
+        .hero-benefits li {
+            padding-left: 0;
+        }
+
         .hero-benefits li::before {
-            content: '✓';
-            background: #ea580c;
-            color: white;
-            border-radius: 50%;
-            width: 26px;
-            height: 26px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            content: '';
             margin-right: 1rem;
-            font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 1.4rem;
             flex-shrink: 0;
-            margin-top: 2px;
+            margin-top: 0;
+        }
+
+        .hero-benefits li:nth-child(1)::before {
+            content: '⏱️';
+        }
+
+        .hero-benefits li:nth-child(2)::before {
+            content: '🎯';
+        }
+
+        .hero-benefits li:nth-child(3)::before {
+            content: '💡';
+        }
+
+        .hero-benefits li:nth-child(4)::before {
+            content: '🚀';
         }
 
         .hero-pricing-card {
             background: white;
-            padding: 3rem 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
-            border: 2px solid #ea580c;
+            padding: 2.5rem 2rem;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border: 2px solid rgba(135, 206, 235, 0.3);
             position: relative;
             overflow: hidden;
-        }
-
-        .hero-pricing-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #ea580c, #c2410c);
+            text-align: center;
         }
 
         .hero-pricing-card h3 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             color: #1a1a1a;
         }
 
         .hero-price {
             font-size: 3.5rem;
             font-weight: bold;
-            margin: 1.5rem 0;
+            margin: 1rem auto;
             color: #1a1a1a;
+            text-align: center;
         }
 
         .hero-price-note {
             color: #64748b;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             font-size: 0.95rem;
-        }
-
-        .trial-badge {
-            background: #16a34a;
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            display: inline-block;
+            text-align: center;
         }
 
         .hero-cta {
-            display: block;
-            width: 100%;
-            background: #ea580c;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #87ceeb 0%, #ff6b35 100%);
             color: white;
-            padding: 1.3rem 2rem;
-            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
-            border-radius: 12px;
+            border-radius: 50px;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(234, 88, 12, 0.25);
+            box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
             text-align: center;
-            margin-top: 1.5rem;
         }
 
         .hero-cta:hover {
-            background: #c2410c;
             transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(234, 88, 12, 0.35);
+            box-shadow: 0 6px 20px rgba(135, 206, 235, 0.4);
         }
 
         .review-note {
             font-size: 0.85rem;
             color: #64748b;
             text-align: center;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             font-style: italic;
         }
 
@@ -379,6 +371,11 @@
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
+
+            .hero-pricing-card {
+                max-width: 400px;
+                margin: 0 auto;
+            }
         }
 
         @media (max-width: 768px) {
@@ -427,7 +424,11 @@
             }
 
             .hero-price {
-                font-size: 3rem;
+                font-size: 2.8rem;
+            }
+
+            .hero-pricing-card {
+                padding: 2rem 1.5rem;
             }
         }
     </style>
@@ -471,11 +472,13 @@
                         <h3>Professional</h3>
                         <div class="hero-price">$15</div>
                         <p class="hero-price-note">per user / month</p>
-                        <div class="trial-badge">2 Week Free Trial</div>
-                        <p style="color: #475569; font-size: 0.95rem; margin-bottom: 1rem;">
-                            Get full access to all features. No credit card required.
-                        </p>
-                        <a href="https://chrome.google.com/webstore" class="hero-cta">Start Free Today</a>
+                        <a href="https://chrome.google.com/webstore" class="hero-cta">
+                            Start Free Today
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 17L17 7"></path>
+                                <path d="M7 7h10v10"></path>
+                            </svg>
+                        </a>
                         <p class="review-note">
                             Leave a review and get an extra 2 weeks free (1 month total!)
                         </p>

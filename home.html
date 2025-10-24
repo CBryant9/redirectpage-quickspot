@@ -335,6 +335,106 @@
             z-index: 1;
         }
 
+        /* Problem Statement Section */
+        .problem-statement {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .problem-statement-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .problem-visual-side {
+            background: linear-gradient(135deg, #f0f9ff 0%, #fef7ed 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .problem-text-side {
+            padding: 2rem 0;
+        }
+
+        .problem-brow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #87ceeb;
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .problem-statement h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .problem-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .problem-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .problem-icon-box {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+        }
+
+        .problem-item-text {
+            flex: 1;
+            color: #64748b;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            padding-top: 0.5rem;
+        }
+
+        .solution-callout {
+            background: linear-gradient(135deg, rgba(135, 206, 235, 0.1) 0%, rgba(135, 206, 235, 0.05) 100%);
+            border-left: 4px solid #87ceeb;
+            border-radius: 12px;
+            padding: 1.75rem 2rem;
+            margin-top: 2rem;
+        }
+
+        .solution-callout p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.5;
+            margin: 0;
+        }
+
         /* Intro Section */
         .intro-section {
             padding: 5rem 0;
@@ -1058,7 +1158,8 @@
             .solution-content,
             .problem-content,
             .how-it-works-content,
-            .feature-showcase-content {
+            .feature-showcase-content,
+            .problem-statement-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
@@ -1075,6 +1176,10 @@
 
             .feature-visual {
                 min-height: 300px;
+            }
+
+            .problem-visual-side {
+                min-height: 350px;
             }
         }
 
@@ -1143,6 +1248,18 @@
             .feature-description {
                 font-size: 1rem;
             }
+
+            .problem-statement h2 {
+                font-size: 2rem;
+            }
+
+            .problem-item-text {
+                font-size: 0.95rem;
+            }
+
+            .solution-callout p {
+                font-size: 1.05rem;
+            }
         }
     </style>
 </head>
@@ -1181,6 +1298,56 @@
                     <a href="#features" class="cta-secondary">
                         Learn More
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="problem-statement">
+        <div class="container">
+            <div class="problem-statement-content">
+                <div class="problem-visual-side">
+                    <div class="feature-visual-placeholder">
+                        HubSpot Interface Mockup
+                    </div>
+                </div>
+                <div class="problem-text-side">
+                    <div class="problem-brow">The Problem</div>
+                    <h2>Save yourself hours of time and frustration every day.</h2>
+
+                    <div class="problem-items">
+                        <div class="problem-item">
+                            <div class="problem-icon-box">
+                                🔍
+                            </div>
+                            <div class="problem-item-text">
+                                First you have to find what type of object you're looking for in the confusing and cluttered side panel, then find the specific object.
+                            </div>
+                        </div>
+
+                        <div class="problem-item">
+                            <div class="problem-icon-box">
+                                📄
+                            </div>
+                            <div class="problem-item-text">
+                                All the properties you need are probably deep in a list of hundreds of properties you never use.
+                            </div>
+                        </div>
+
+                        <div class="problem-item">
+                            <div class="problem-icon-box">
+                                🔗
+                            </div>
+                            <div class="problem-item-text">
+                                Then you have to open a new tab and do the same to see the details of records associated to that one. It's hours of wasted clicks, tab switching and eyestrain.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="solution-callout">
+                        <p>Quick Spot solves this problem for you and gives you your time back.</p>
+                    </div>
                 </div>
             </div>
         </div>

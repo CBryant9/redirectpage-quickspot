@@ -110,7 +110,7 @@
             position: relative;
             overflow: hidden;
             padding-top: 140px;
-            padding-bottom: 5rem;
+            padding-bottom: 7rem;
         }
 
         .hero .container {
@@ -427,6 +427,90 @@
             margin-bottom: 1.5rem;
             letter-spacing: 0.1em;
             text-transform: uppercase;
+        }
+
+        /* Solution Statement Section */
+        .solution-statement {
+            padding: 4rem 0 4rem 0;
+            background: white;
+        }
+
+        .solution-statement-content {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .solution-visual-side {
+            background: linear-gradient(135deg, #f0f9ff 0%, #fef7ed 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .solution-text-side {
+            padding: 2rem 0;
+        }
+
+        .solution-brow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ff6b35;
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .solution-statement h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .solution-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .solution-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .solution-icon-box {
+            width: 48px;
+            height: 48px;
+            background: rgba(135, 206, 235, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+        }
+
+        .solution-item-text {
+            flex: 1;
+            color: #1e293b;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            padding-top: 0.5rem;
         }
 
         .problem-statement h2 {
@@ -1269,6 +1353,15 @@
                 display: none;
             }
 
+            .solution-visual-side {
+                display: none;
+            }
+
+            .solution-statement-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
             .feature-showcase-content,
             .feature-showcase-content.reverse {
                 grid-template-columns: 1fr !important;
@@ -1474,6 +1567,22 @@
                 font-size: 1.2rem;
             }
 
+            .solution-brow {
+                font-size: 1.2rem;
+            }
+
+            .solution-statement h2 {
+                font-size: 2.6rem;
+            }
+
+            .solution-item-text {
+                font-size: 1.15rem;
+            }
+
+            .solution-visual-side {
+                min-height: 350px;
+            }
+
             .feature-brow {
                 font-size: 1rem;
             }
@@ -1579,6 +1688,56 @@
         </div>
     </section>
 
+    <!-- Solution Statement Section -->
+    <section class="solution-statement">
+        <div class="container">
+            <div class="solution-statement-content">
+                <div class="solution-text-side">
+                    <div class="solution-brow">The Solution</div>
+                    <h2>The Quick Spot Chrome Extension</h2>
+
+                    <div class="solution-items">
+                        <div class="solution-item">
+                            <div class="solution-icon-box">
+                                🔍
+                            </div>
+                            <div class="solution-item-text">
+                                HubSpot can be a pain. First you have to find what type of object you're looking for in the confusing and cluttered side panel, then find the specific object.
+                            </div>
+                        </div>
+
+                        <div class="solution-item">
+                            <div class="solution-icon-box">
+                                📄
+                            </div>
+                            <div class="solution-item-text">
+                                All the properties you need are probably deep in a list of hundreds of properties you never use.
+                            </div>
+                        </div>
+
+                        <div class="solution-item">
+                            <div class="solution-icon-box">
+                                🔗
+                            </div>
+                            <div class="solution-item-text">
+                                Then you have to open a new tab and do the same to see the details of records associated to that one. It's hours of wasted clicks, tab switching and eyestrain.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="solution-callout">
+                        <p>Quick Spot solves this problem for you and gives you your time back.</p>
+                    </div>
+                </div>
+                <div class="solution-visual-side">
+                    <div class="feature-visual-placeholder">
+                        HubSpot Interface Mockup
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- How It Works Divider -->
     <section class="section-divider">
         <div class="container">
@@ -1627,7 +1786,7 @@
                 </div>
                 <div class="feature-text">
                     <div class="feature-brow">⚡ Game Changer</div>
-                    <h2>Viewing Associated Record's Made Easy!</h2>
+                    <h2>Associated Record's Made Easy</h2>
                     <p class="feature-description">
                         One of the biggest pains in HubSpot is that you can really only see one type of record in detail at a time. You're looking at a contact, but if you want to see multiple properties of the associated deals or multiple deals at once - you need to open another tab and click back and forth to get the whole picture.
                     </p>

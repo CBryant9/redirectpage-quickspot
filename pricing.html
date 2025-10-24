@@ -27,33 +27,36 @@
 
         /* Header */
         header {
-            background: rgba(250, 250, 250, 0.95);
-            backdrop-filter: blur(20px);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             padding: 1.5rem 0;
         }
 
+        nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 100px;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
         .logo {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            color: #ea580c;
+            color: #1a1a1a;
             letter-spacing: -0.02em;
             text-decoration: none;
         }
 
         .nav-links {
             display: flex;
-            gap: 3rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
@@ -62,27 +65,41 @@
             color: #64748b;
             font-weight: 500;
             font-size: 0.95rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #ea580c;
-            transition: width 0.3s ease;
+            transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: #ea580c;
+            color: #1a1a1a;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #1a1a1a;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
         }
 
         /* Pricing Hero */
@@ -321,6 +338,41 @@
             font-size: 0.9rem;
         }
 
+        /* Footer */
+        footer {
+            background: #fafafa;
+            border-top: 1px solid #e2e8f0;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .footer-links a {
+            color: #64748b;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #1a1a1a;
+        }
+
+        .footer-separator {
+            color: #cbd5e1;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .pricing-hero-content {
@@ -330,8 +382,32 @@
         }
 
         @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
             .nav-links {
+                position: absolute;
+                top: calc(100% + 1rem);
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                border-radius: 20px;
+                padding: 1.5rem;
+                flex-direction: column;
+                gap: 1rem;
+                border: 1px solid rgba(0, 0, 0, 0.06);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
                 display: none;
+                min-width: 200px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            nav {
+                position: relative;
             }
 
             .container {
@@ -360,12 +436,17 @@
     <!-- Header -->
     <header>
         <nav class="container">
-            <a href="home.html" class="logo">Quick Spot</a>
+            <div class="logo">Quick Spot</div>
             <ul class="nav-links">
-                <li><a href="home.html#features">Features</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="home.html#install">Install</a></li>
+                <li><a href="install.html">Install</a></li>
             </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -453,7 +534,43 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="home.html">Home</a>
+                    <span class="footer-separator">•</span>
+                    <a href="/connection-url">Connection URL</a>
+                    <span class="footer-separator">•</span>
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <span class="footer-separator">•</span>
+                    <a href="https://tally.so/r/wabNjE" target="_blank">Become a Beta Tester</a>
+                    <span class="footer-separator">•</span>
+                    <a href="/trial-payment-terms.html">Trial & Payment Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

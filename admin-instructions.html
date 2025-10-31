@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Instructions - Quick Spot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #FEFCF8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #87ceeb 0%, #ff6b35 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon svg {
+            width: 45px;
+            height: 45px;
+            stroke: white;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2d2d2d;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .instructions {
+            background-color: #FFFBF5;
+            border: 1px solid #F5E6D3;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: left;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .instructions h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .step {
+            margin-bottom: 24px;
+            font-size: 16px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: start;
+            margin-bottom: 12px;
+        }
+
+        .step-number {
+            background-color: #F5E6D3;
+            color: #666;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            margin-right: 14px;
+            flex-shrink: 0;
+        }
+
+        .email-template {
+            background-color: #f8f8f8;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        .email-template .email-subject {
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-bottom: 12px;
+        }
+
+        .email-template .email-body {
+            white-space: pre-line;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: #87ceeb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .copy-button:hover {
+            background-color: #6bb8d8;
+        }
+
+        .copy-button:active {
+            background-color: #5aa5c5;
+        }
+
+        .note {
+            background-color: #fff5e6;
+            border-left: 4px solid #ff6b35;
+            padding: 16px;
+            margin-top: 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .note strong {
+            color: #ff6b35;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: #888;
+        }
+
+        .brand {
+            font-weight: 600;
+            color: #87ceeb;
+        }
+
+        .privacy-link {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 20px;
+        }
+
+        .privacy-link a {
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        .privacy-link a:hover {
+            color: #888;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+            </svg>
+        </div>
+
+        <h1>Admin Instructions</h1>
+        <p class="subtitle">Connect Quick Spot to Your HubSpot Account</p>
+
+        <div class="instructions">
+            <h2>How to Connect HubSpot</h2>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div><strong>Send Connection Request to Your Admin</strong></div>
+                </div>
+                <div style="padding-left: 42px;">
+                    Send the following email to your HubSpot administrator to request access for Quick Spot:
+
+                    <div class="email-template">
+                        <button class="copy-button" onclick="copyEmail()">Copy</button>
+                        <div class="email-subject">Subject: Quick Spot HubSpot Connection Request</div>
+                        <div class="email-body">Hi [Admin Name],
+
+I'd like to use Quick Spot, a browser extension that helps streamline our HubSpot workflow. To connect it to our HubSpot account, I need admin approval.
+
+Could you please:
+1. Click this link: [CONNECTION_LINK_HERE]
+2. Authorize Quick Spot to access our HubSpot account
+
+Quick Spot is a productivity tool that helps with [brief description of what you'll use it for]. The connection is secure and follows HubSpot's OAuth standards.
+
+Let me know if you have any questions!
+
+Thanks,
+[Your Name]</div>
+                    </div>
+
+                    <div class="note">
+                        <strong>Note:</strong> Replace [CONNECTION_LINK_HERE] with the actual connection URL provided by Quick Spot.
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div><strong>Wait for Admin Confirmation</strong></div>
+                </div>
+                <div style="padding-left: 42px;">
+                    Your administrator will receive your request and authorize the Quick Spot connection to your HubSpot account. This usually takes just a few minutes.
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div><strong>Connection Complete!</strong></div>
+                </div>
+                <div style="padding-left: 42px;">
+                    Once your admin confirms the connection, Quick Spot will automatically be linked to your HubSpot account. You can now start using all Quick Spot features with your HubSpot data.
+                </div>
+            </div>
+        </div>
+
+        <p class="footer-text">
+            Questions? Contact us at <span class="brand">quickspot.help@gmail.com</span>
+        </p>
+
+        <p class="privacy-link">
+            <a href="/home">Home</a> • <a href="/connection-url">Connection URL</a> • <a href="/privacy-policy.html">Privacy Policy</a> • <a href="https://tally.so/r/wabNjE" target="_blank">Become a Beta Tester</a> • <a href="/trial-payment-terms.html">Trial & Payment Terms</a>
+        </p>
+    </div>
+
+    <script>
+        function copyEmail() {
+            const emailText = `Subject: Quick Spot HubSpot Connection Request
+
+Hi [Admin Name],
+
+I'd like to use Quick Spot, a browser extension that helps streamline our HubSpot workflow. To connect it to our HubSpot account, I need admin approval.
+
+Could you please:
+1. Click this link: [CONNECTION_LINK_HERE]
+2. Authorize Quick Spot to access our HubSpot account
+
+Quick Spot is a productivity tool that helps with [brief description of what you'll use it for]. The connection is secure and follows HubSpot's OAuth standards.
+
+Let me know if you have any questions!
+
+Thanks,
+[Your Name]`;
+
+            navigator.clipboard.writeText(emailText).then(() => {
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
